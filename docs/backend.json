@@ -1,0 +1,54 @@
+
+{
+  "entities": {
+    "Booking": {
+      "title": "Booking",
+      "description": "Represents a DJ service booking for an event.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "district": { "type": "string", "enum": ["Chennai", "Thiruvallur", "Others"] },
+        "area": { "type": "string" },
+        "eventType": { "type": "string", "enum": ["Wedding", "Birthday", "Corporate", "Others"] },
+        "location": { "type": "string" },
+        "packageType": { "type": "string", "enum": ["Silver", "Gold"] },
+        "selectedItems": { "type": "array", "items": { "type": "string" } },
+        "totalPrice": { "type": "number" },
+        "status": { "type": "string", "enum": ["under verification", "confirmed", "rejected", "completed"] },
+        "refNumber": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "phone", "date", "district", "packageType", "status", "refNumber"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" }
+      },
+      "required": ["uid"]
+    }
+  },
+  "auth": {
+    "providers": ["google", "password"]
+  },
+  "firestore": {
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "Collection of all event bookings."
+    },
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile documents."
+    }
+  }
+}

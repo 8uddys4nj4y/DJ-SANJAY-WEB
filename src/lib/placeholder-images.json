@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-dj",
+      "description": "Premium DJ set in a nightclub",
+      "imageUrl": "https://picsum.photos/seed/dj-sanjay/1200/800",
+      "imageHint": "nightclub dj"
+    },
+    {
+      "id": "silver-package",
+      "description": "Standard DJ equipment setup",
+      "imageUrl": "https://picsum.photos/seed/silver/600/400",
+      "imageHint": "dj equipment"
+    },
+    {
+      "id": "gold-package",
+      "description": "Premium DJ equipment setup with lights",
+      "imageUrl": "https://picsum.photos/seed/gold/600/400",
+      "imageHint": "stage lighting"
+    },
+    {
+      "id": "review-1",
+      "description": "Happy couple at wedding",
+      "imageUrl": "https://picsum.photos/seed/couple1/200/200",
+      "imageHint": "wedding party"
+    },
+    {
+      "id": "review-2",
+      "description": "Corporate event crowd",
+      "imageUrl": "https://picsum.photos/seed/corporate/200/200",
+      "imageHint": "event crowd"
+    }
+  ]
+}
